@@ -1,0 +1,26 @@
+[package]
+name = "aliyun-driver"
+version = "0.1.0"
+authors = ["wshon"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0.43"
+bytes = "1.0.1"
+futures-util = "0.3.16"
+headers = "0.3.4"
+hyper = { version = "0.14.11", features = ["server"] }
+moka = { version = "0.6.0", default-features = false, features = ["future"] }
+openssl-probe = { version = "0.1.4", optional = true }
+reqwest = { version = "0.11.4", features = ["json", "gzip"] }
+serde = { version = "1.0.127", features = ["derive"] }
+structopt = "0.3.22"
+time = { version = "0.3.1", features = ["formatting", "parsing"] }
+tokio = { version = "1.10.0", features = ["rt-multi-thread", "io-util", "net", "time", "sync", "macros", "parking_lot", "fs"] }
+tracing = "0.1"
+tracing-subscriber = "0.2"
+url = "2.2.2"
+webdav-handler = { git = "https://github.com/sj6219/webdav-handler-rs", branch = "win", default-features = false, features = ["hyper"] }
+# webdav-handler = { version = "0.2.0", default-features = false, features = ["hyper"] }
